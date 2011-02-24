@@ -88,6 +88,16 @@ Lein:
 With this method, you only have to save your Clojure source files for
 changes to appear in the running application.
 
+## TODO
+
+* Support different formats (JSON, XML) via `Accept` and
+  `Content-Type` headers
+  
+* cURL examples w/GET, PUT, POST, DELETE
+
+* Figure out how to get a swank server running inside `lein ring
+  server` so we don't need two JVM instances (blows up H2)
+
 ## License
 
 Copyright (C) 2010 Robert Campbell
