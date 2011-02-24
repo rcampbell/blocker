@@ -68,7 +68,17 @@ You should now open up `core.clj` and compile it:
 You can now open [http://localhost:3000/](http://localhost:3000/) in
 your browser to see the running application. Any changes you make to
 your Clojure source files require only a recompile to appear in the
-running application. No reboots or redeploys are necessary. 
+running application. You can interact with the running
+application through your REPL:
+
+    user> (require '[blocker.db :as db])
+    nil
+    (db/create-block! "foobar")
+    "ZiYNBy"    
+    user> @(db/get-block "ZiYNBy")
+    ({:text #<JdbcClob clob2: 'foobar'>})    
+    user> (clojure.java.browse/browse-url "http://localhost:3000/blocks/ZiYNBy")
+    "http://localhost:3000/blocks/ZiYNBy"
 
 You can also run the server from the shell using the Ring plugin for
 Lein:
