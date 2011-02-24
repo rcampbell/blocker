@@ -25,8 +25,8 @@ The following components have been pre-wired:
 This example assumes you have [Git](http://git-scm.com/),
 [Leiningen](https://github.com/technomancy/leiningen/blob/master/README.md),
 and [Emacs](http://www.gnu.org/software/emacs/) installed and
-configured. For more details on getting up and running with Emacs and
-Clojure, I recommend you [read this]().
+configured. For help setting up your development environment, you can
+check out these guides for [Windows](http://blog.robert-campbell.com/getting-started-with-emacs-for-clojure-develo) or [Linux](http://riddell.us/ClojureSwankLeiningenWithEmacsOnLinux.html).
 
 In your shell:
 
