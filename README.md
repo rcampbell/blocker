@@ -3,22 +3,22 @@
 Blocker is a lightweight project skeleton that implements [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 operations in a
 [RESTful](http://en.wikipedia.org/wiki/Representational_State_Transfer)
-manner using standard Clojure libraries.
-
-It should give new Clojure developers a reasonable starting point from
+manner using standard Clojure libraries. It should give new Clojure developers a reasonable starting point from
 which to build their web applications.
 
 The following components have been pre-wired:
 
-* [H2 database](http://www.h2database.com/) has been embedded to provide a JDBC-compliant durable store.
+* [H2 database](http://www.h2database.com/) has been embedded to provide JDBC-compliant durable storage.
 
-* [ClojureQL](http://clojureql.org/) is used to ...
+* [ClojureQL](http://clojureql.org/) is used to map Clojure
+  expressions to relational database queries.
 
-* [Enlive](https://github.com/cgrand/enlive/wiki) is used to merge pure HTML views with data models.
+* [Enlive](https://github.com/cgrand/enlive/wiki) is used to merge pure XHTML views with data models.
 
 * [Compojure](https://github.com/weavejester/compojure/wiki) is used to define routes, mapping our RESTful URLs to their respective handlers.
 
-* [Ring](https://github.com/mmcgrana/ring/wiki) provides our [Jetty](http://jetty.codehaus.org/jetty/) adapter and HTTP framework.
+* [Ring](https://github.com/mmcgrana/ring/wiki) provides our
+  [Jetty](http://jetty.codehaus.org/jetty/) adapter and core HTTP abstraction.
 
 ## Usage
 
@@ -48,14 +48,13 @@ In your shell:
     rrc@X /projects/blocker (master)
     $ lein swank
     user=> Connection opened on local port  4005
-    #<ServerSocket
-    ServerSocket[addr=localhost/127.0.0.1,port=0,localport=4005]>
+    #<ServerSocket ServerSocket[addr=localhost/127.0.0.1,port=0,localport=4005]>
     
-In Emacs, connect to our swank server via:
+In Emacs, connect to our swank server:
 
     M-x slime-connect
     
-Once you are connected, you can initialize the database by evaluating
+Once you are connected you can initialize the database by evaluating
 the `init.clj` script in the REPL:
 
     user> (load "blocker/init")
@@ -64,10 +63,10 @@ You should now open up `core.clj` and compile it:
 
     C-c C-k
     
-You can now open `http://localhost:3000/` in your browser to see the
-running application. Any changes you make to your Clojure source files
-require only a recompile to appear in the running application. No
-reboots or redeploys are necessary. 
+You can now open [http://localhost:3000/](http://localhost:3000/) in
+your browser to see the running application. Any changes you make to
+your Clojure source files require only a recompile to appear in the
+running application. No reboots or redeploys are necessary. 
 
 You can also run the server from the shell using the Ring plugin for
 Lein:
