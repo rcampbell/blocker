@@ -73,12 +73,12 @@ application through your REPL:
 
     user> (require '[blocker.db :as db])
     nil
-    (db/create-block! "foobar")
-    "ZiYNBy"    
-    user> @(db/get-block "ZiYNBy")
-    ({:text #<JdbcClob clob2: 'foobar'>})    
-    user> (clojure.java.browse/browse-url "http://localhost:3000/blocks/ZiYNBy")
-    "http://localhost:3000/blocks/ZiYNBy"
+    user> (db/create-block! "foobar")
+    "IqPWJb"
+    user> @(db/get-block *1) ; *1 is bound to the last value printed
+    ({:text #<JdbcClob clob4: 'foobar'>})
+    user> (clojure.java.browse/browse-url (str "http://localhost:3000/blocks/" *2))
+    "http://localhost:3000/blocks/IqPWJb"    
 
 You can also run the server from the shell using the Ring plugin for
 Lein:
