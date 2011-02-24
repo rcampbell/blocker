@@ -24,7 +24,9 @@ The following components have been pre-wired:
 
 This example assumes you have [Git](http://git-scm.com/),
 [Leiningen](https://github.com/technomancy/leiningen/blob/master/README.md),
-and [Emacs installed and configured](#).
+and [Emacs](http://www.gnu.org/software/emacs/) installed and
+configured. For more details on getting up and running with Emacs and
+Clojure, I recommend you [read this]().
 
 In your shell:
 
@@ -57,7 +59,7 @@ In Emacs, connect to our swank server:
 Once you are connected you can initialize the database by evaluating
 the `init.clj` script in the REPL:
 
-    user> (load "blocker/init")
+    user> (load "blocker/db" "blocker/init")
     
 You should now open up `core.clj` and compile it:
 
